@@ -1,0 +1,44 @@
+/* Format of NavBar*/
+.bg-custom {
+    background: rgba(20, 20, 20, 0.9);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus,
+.navbar-toggler {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+a.nav-link {
+    display: flex;
+    align-items: center;
+    margin: 0px 30px;
+    font-size: 14px;
+    color: #f5f5f7 !important;
+    height: 45px;
+}
+
+@media (max-width: 575.98px) {
+
+    .nav-link,
+    .navbar-toggler {
+        height: 45px;
+    }
+
+    p {
+        text-align: justify;
+    }
+}
+
+#footer {
+    color: rgba(20, 20, 20, 0.47);
+}
+
+footer p {
+    margin: 0;
+    font-size: 15px;
+    text-align: center;
+}

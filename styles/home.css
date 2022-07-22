@@ -1,0 +1,70 @@
+/* Vertical Alignment */
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+/* #main {
+    display: none;
+} */
+
+.icon {
+    padding-bottom: 4px;
+}
+
+#About {
+    background-color: rgb(245, 245, 245);
+}
+
+p.card-text {
+    text-align: justify;
+}
+
+div.card {
+    margin-bottom: 10px;
+}
+
+
+/* Call-to-Action Format */
+#c2a {
+    background-color: rgba(20, 20, 20, 0.9);
+    color: #f5f5f7;
+    font-size: 15px;
+}
+
+
+/* Format of About Page*/
+#qnAbout {
+    margin-bottom: 8px;
+}
+
+#infoAbout {
+    text-align: justify;
+}
+
+
+/* Format of Home Page*/
+#infoHome {
+    text-align: justify;
+}
+
+@media (max-width: 991.98px) {
+
+    #rowHome,
+    #infoHome {
+        text-align: center;
+    }
+
+    #titleHome {
+        margin-top: 16px;
+    }
+
+    img {
+        width: 216px;
+    }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/water_management.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <script src="./scripts/water_management.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="shortcut icon" href="../media/favicon.png" type=" image/x-icon">
+</head>
+
+<body>
+    <div class="animate-bottom">
+        <nav class="navbar navbar-expand-sm p-0 fixed-top navbar-dark bg-custom" id="navbar">
+            <div class="container-fluid justify-content-center">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
+                    aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navmenu">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item">
+                            <a href="./index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./index.html#About" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./portfolio.html" class="nav-link">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./contact.html" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <h1 class="h2 text-center">Water Management</h1>
+                        <br>
+                        <p>A flood control system, a 24-hour weather monitoring system, and a pedestrian lamp post were
+                            offered as
+                            solutions. The flood control system will utilize an infrared sensor to assess whether the
+                            water
+                            level is
+                            dangerously high, and if it is, it will activate the Relay, which will work as a drainage
+                            pump,
+                            and send
+                            an email to the proper authorities. We'll use the DHT11 to track temperature and humidity
+                            for a
+                            24-hour
+                            weather monitoring system, then upload the data to Thingspeak Dashboard and do the necessary
+                            analysis to
+                            forecast and investigate the weather.</p>
+                        <figure>
+                            <img src="../media/block diagram.png" alt="block diagram"
+                                class="img-fluid rounded mx-auto d-block">
+                            <figcaption class="text-center">Fig.1 - Block Diagram</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h4 class="card-title">How does it work?</h4>
+                                <h5 class="card-subtitle mb-2 text-muted">Requirements</h5>
+                                <p class="card-text text-center">
+                                    <span>Requirement 1:</span> When LDR is NOT Triggered (Day), RGB LED will turn OFF.
+                                    <br>
+                                    <span>Requirement 2:</span> When LDR is Triggered (Night), RGB LED will turn ON.
+                                    <br>
+                                    <span>Requirement 3:</span> Relay & Buzzer will turn ON when Avoid Sensor Module is
+                                    Triggered.
+                                    <br>
+                                    <span>Requirement 4:</span> An email notification will be sent from Raspberry Pi’s
+                                    code
+                                    when
+                                    Requirement 3 is TRUE.
+                                </p>
+                                <a href="https://youtu.be/_iYNw39Udz0" class="btn btn-outline-light card-link" id="c2a"
+                                    target="_blank">View Video</a>
+                                <a href="https://github.com/notKaho/Water-Management"
+                                    class="btn btn-outline-light card-link" id="c2a" target="_blank">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <h1 class="h3 text-center">Data Analysis</h1>
+                    <div class="col-lg-9">
+                        <div class="table-responsive-md">
+                            <table class="table text-center table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">created_at <br>(17/2/2022)</th>
+                                        <th scope="col">field1 <br>(Temperature °C) </th>
+                                        <th scope="col">field2 <br>(Humdity %)</th>
+                                        <th scope="col">field3 <br>(LDR Value)</th>
+                                        <th scope="col">field4 <br>(LED State)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Table inserted here by Javascript... -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <br><br>
+                <h1 class="h3 text-center">Charts</h1>
+                <canvas id="scatterPlot"></canvas>
+                <br><br>
+                <canvas id="dualAxisPlot"></canvas>
+                <br><br>
+            </div>
+        </section>
+    </div>
+
+    <footer class="fixed-bottom" id="footer">
+        <p>Copyright &copy; Andrew</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
